@@ -3,110 +3,177 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - Organisation of KUET Sports</title>
+    <title>About Us – Organisation of KUET Sports (OKS)</title>
+    <meta name="description" content="Learn about the mission, vision, leadership and history of the Organisation of KUET Sports — the premier student sports body at KUET." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>" />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <div class="navbar">
-      <h2>KUET Sports</h2>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </div>
+    <header class="navbar" id="navbar">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-icon">🏆</span>
+        <span>OKS KUET</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger"></span>
+      </button>
+      <nav id="primary-navigation" class="nav-menu" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="hero" style="height: 60vh; margin-top: 60px;">
-      <div>
-        <h1>About Us</h1>
-        <p>Learn about our mission and vision</p>
+    <section class="hero hero--short">
+      <div class="hero__inner">
+        <div class="hero__badge">About OKS</div>
+        <h1>Our Story &amp; Mission</h1>
+        <p>Building athletes, leaders and lifelong friendships at KUET since 2014.</p>
+      </div>
+    </section>
+
+    <div class="section--full section--alt">
+      <div class="section">
+        <div class="cards" style="grid-template-columns: 1fr 1fr;">
+          <div class="card reveal-left">
+            <div class="card__icon">🎯</div>
+            <h3>Our Mission</h3>
+            <p>The Organisation of KUET Sports is dedicated to promoting physical fitness, teamwork, and excellence among KUET students. We create a platform where students can develop their athletic abilities while building strong bonds with their peers through competitive and recreational sports activities.</p>
+          </div>
+          <div class="card reveal-right">
+            <div class="card__icon">🔭</div>
+            <h3>Our Vision</h3>
+            <p>To be the leading sports organisation at KUET, fostering a culture of health, discipline, and sportsmanship. We envision a community where every student has the opportunity to participate in sports and achieve their personal best — on and off the field.</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="section">
-      <h2>Our Mission</h2>
-      <p>
-        The Organisation of KUET Sports is dedicated to promoting physical fitness, 
-        teamwork, and excellence among KUET students. We aim to create a platform where 
-        students can develop their athletic abilities while building strong bonds with 
-        their peers through competitive and recreational sports activities.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>Our Vision</h2>
-      <p>
-        To be the leading sports organization at KUET, fostering a culture of health, 
-        discipline, and sportsmanship. We envision a community where every student has 
-        the opportunity to participate in sports and achieve their personal best.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>What We Offer</h2>
+      <div class="section__header reveal">
+        <span class="section__label">Programs</span>
+        <h2 class="section__title">What We Offer</h2>
+        <p class="section__subtitle">A wide range of athletic programs designed for all levels of experience.</p>
+      </div>
       <div class="cards">
-        <div class="card">
+        <div class="card reveal">
+          <div class="card__icon">⚽</div>
           <h3>Team Sports</h3>
-          <p>
-            Football, cricket, basketball, and volleyball programs for all skill levels.
-          </p>
+          <p>Football, cricket, basketball, and volleyball programs with structured leagues and tournaments for all skill levels.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
+          <div class="card__icon">🏃</div>
           <h3>Individual Sports</h3>
-          <p>
-            Athletics, badminton, table tennis, and other individual competitive sports.
-          </p>
+          <p>Athletics, badminton, table tennis, and other individual competitive sports with personal coaching available.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
+          <div class="card__icon">💪</div>
           <h3>Training Programs</h3>
-          <p>
-            Professional coaching and training sessions to improve athletic performance.
-          </p>
+          <p>Professional coaching and training sessions led by experienced coaches to improve athletic performance and technique.</p>
         </div>
       </div>
     </div>
 
-    <div class="section">
-      <h2>Leadership Team</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>President</h3>
-          <p>Leading the organization and setting strategic direction</p>
+    <div class="section--full section--alt">
+      <div class="section">
+        <div class="section__header reveal">
+          <span class="section__label">The Team</span>
+          <h2 class="section__title">Leadership</h2>
+          <p class="section__subtitle">Dedicated student leaders working tirelessly to make OKS the best it can be.</p>
         </div>
-        <div class="card">
-          <h3>Vice President</h3>
-          <p>Overseeing event management and operations</p>
-        </div>
-        <div class="card">
-          <h3>Secretary</h3>
-          <p>Managing communications and administrative tasks</p>
+        <div class="cards">
+          <div class="card team-card reveal">
+            <div class="team-card__avatar">🧑</div>
+            <div class="team-card__role">President</div>
+            <div class="team-card__name">Md. Rafiqul Islam</div>
+            <p class="card p">Leading the organisation and setting strategic direction for all sports activities at KUET.</p>
+          </div>
+          <div class="card team-card reveal">
+            <div class="team-card__avatar">👩</div>
+            <div class="team-card__role">Vice President</div>
+            <div class="team-card__name">Nusrat Jahan</div>
+            <p>Overseeing event management, operations, and coordination between departments.</p>
+          </div>
+          <div class="card team-card reveal">
+            <div class="team-card__avatar">🧑</div>
+            <div class="team-card__role">Secretary</div>
+            <div class="team-card__name">Tanvir Ahmed</div>
+            <p>Managing all communications, registrations, and administrative tasks for OKS.</p>
+          </div>
+          <div class="card team-card reveal">
+            <div class="team-card__avatar">👨</div>
+            <div class="team-card__role">Sports Coordinator</div>
+            <div class="team-card__name">Farhan Hossain</div>
+            <p>Coordinating schedules, venues, and match officials for all sporting events.</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="section">
-      <h2>Our Statistics</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>500+</h3>
-          <p>Active Members</p>
+    <section class="stats" id="stats">
+      <div class="stats__grid">
+        <div class="reveal">
+          <div class="stat__number" data-target="500">0</div>
+          <div class="stat__label">Active Members</div>
         </div>
-        <div class="card">
-          <h3>15+</h3>
-          <p>Sports Programs</p>
+        <div class="reveal">
+          <div class="stat__number" data-target="15">0</div>
+          <div class="stat__label">Sports Programs</div>
         </div>
-        <div class="card">
-          <h3>50+</h3>
-          <p>Annual Events</p>
+        <div class="reveal">
+          <div class="stat__number" data-target="50">0</div>
+          <div class="stat__label">Annual Events</div>
+        </div>
+        <div class="reveal">
+          <div class="stat__number" data-target="12">0</div>
+          <div class="stat__label">Years of Excellence</div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="footer">
-      <p>© 2026 Organisation of KUET Sports</p>
-    </div>
+    <footer class="footer">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">🏆 OKS KUET</div>
+          <p class="footer__desc">The Organisation of KUET Sports promotes athletic excellence, teamwork, and student wellbeing through competitive and recreational sports at KUET.</p>
+          <div class="footer__social">
+            <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+            <a href="#" class="social-icon" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">Quick Links</div>
+          <div class="footer__links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">Sports</div>
+          <div class="footer__links">
+            <a href="#">Football</a>
+            <a href="#">Cricket</a>
+            <a href="#">Basketball</a>
+            <a href="#">Badminton</a>
+            <a href="#">Athletics</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Organisation of KUET Sports. All rights reserved.</p>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

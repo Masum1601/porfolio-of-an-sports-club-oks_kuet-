@@ -3,196 +3,211 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Events - Organisation of KUET Sports</title>
+    <title>Events – Organisation of KUET Sports (OKS)</title>
+    <meta name="description" content="Browse upcoming and past sports events organised by OKS at KUET — tournaments, leagues, championships, and festivals." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>" />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .event-item {
-        background: white;
-        padding: 25px;
-        margin: 20px auto;
-        max-width: 600px;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        border-left: 5px solid #64ffda;
-      }
-
-      .event-item h3 {
-        color: #0a192f;
-        margin-bottom: 10px;
-      }
-
-      .event-date {
-        color: #64ffda;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-
-      .event-description {
-        color: #333;
-        margin-bottom: 15px;
-      }
-
-      .event-location {
-        color: #666;
-        font-size: 14px;
-        margin-bottom: 10px;
-      }
-
-      .register-btn {
-        background: #64ffda;
-        color: #0a192f;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: all 0.3s;
-      }
-
-      .register-btn:hover {
-        background: #00d9b6;
-        transform: scale(1.05);
-      }
-
-      .event-category {
-        display: inline-block;
-        background: #0a192f;
-        color: #64ffda;
-        padding: 5px 10px;
-        border-radius: 3px;
-        font-size: 12px;
-        margin-top: 10px;
-      }
-    </style>
   </head>
 
   <body>
-    <div class="navbar">
-      <h2>KUET Sports</h2>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </div>
+    <header class="navbar" id="navbar">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-icon">🏆</span>
+        <span>OKS KUET</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger"></span>
+      </button>
+      <nav id="primary-navigation" class="nav-menu" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="hero" style="height: 60vh; margin-top: 60px;">
-      <div>
-        <h1>Upcoming Events</h1>
-        <p>Check out our exciting sports competitions and activities</p>
+    <section class="hero hero--short">
+      <div class="hero__inner">
+        <div class="hero__badge">Sports Events</div>
+        <h1>Upcoming &amp; Past Events</h1>
+        <p>Check out our exciting sports competitions, tournaments, and activities.</p>
       </div>
-    </div>
+    </section>
 
     <div class="section">
-      <h2>Featured Events</h2>
-    </div>
-
-    <div class="event-item">
-      <h3>Football Tournament 2026</h3>
-      <div class="event-date">📅 May 15 - May 30, 2026</div>
-      <div class="event-location">📍 KUET Ground, Main Campus</div>
-      <div class="event-description">
-        The biggest football tournament of the year! Teams from all departments will compete 
-        in a thrilling knockout format. Sign up your team now and showcase your skills!
+      <div class="section__header reveal">
+        <span class="section__label">Events Calendar</span>
+        <h2 class="section__title">All Events</h2>
+        <p class="section__subtitle">Filter by category or status to find the events you're interested in.</p>
       </div>
-      <div class="event-category">Tournament</div>
-      <button class="register-btn">Register Team</button>
-    </div>
 
-    <div class="event-item">
-      <h3>Cricket League 2026</h3>
-      <div class="event-date">📅 June 1 - June 20, 2026</div>
-      <div class="event-location">📍 KUET Cricket Field</div>
-      <div class="event-description">
-        Twenty20 cricket league featuring high-octane matches. Individual players can join 
-        through the registration portal or teams can register together.
+      <div class="event-filter" id="eventFilter">
+        <button class="filter-btn active" data-filter="all">All Events</button>
+        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+        <button class="filter-btn" data-filter="past">Past</button>
+        <button class="filter-btn" data-filter="Tournament">Tournament</button>
+        <button class="filter-btn" data-filter="League">League</button>
+        <button class="filter-btn" data-filter="Championship">Championship</button>
+        <button class="filter-btn" data-filter="Festival">Festival</button>
       </div>
-      <div class="event-category">League</div>
-      <button class="register-btn">Register</button>
-    </div>
 
-    <div class="event-item">
-      <h3>Athletic Championships</h3>
-      <div class="event-date">📅 April 28 - April 29, 2026</div>
-      <div class="event-location">📍 KUET Athletic Track</div>
-      <div class="event-description">
-        Track and field events including sprints, long-distance runs, jumps, and throws. 
-        Open to all KUET students. Individual participation encouraged.
-      </div>
-      <div class="event-category">Championship</div>
-      <button class="register-btn">Register</button>
-    </div>
+      <div class="events-list" id="eventsList">
 
-    <div class="event-item">
-      <h3>Badminton Championship</h3>
-      <div class="event-date">📅 May 10 - May 15, 2026</div>
-      <div class="event-location">📍 KUET Indoor Sports Complex</div>
-      <div class="event-description">
-        Singles and doubles badminton championship. All players welcome, from beginners to advanced. 
-        Professional referees and standard courts provided.
-      </div>
-      <div class="event-category">Championship</div>
-      <button class="register-btn">Register</button>
-    </div>
-
-    <div class="event-item">
-      <h3>Indoor Games Festival</h3>
-      <div class="event-date">📅 June 5 - June 7, 2026</div>
-      <div class="event-location">📍 KUET Student Center</div>
-      <div class="event-description">
-        Table tennis, chess, carrom, and other indoor games. Family-friendly atmosphere with 
-        prizes for winners. Perfect for unwinding after exams!
-      </div>
-      <div class="event-category">Festival</div>
-      <button class="register-btn">Register</button>
-    </div>
-
-    <div class="section">
-      <h2>Past Events</h2>
-    </div>
-
-    <div class="event-item">
-      <h3>Basketball Tournament (Completed)</h3>
-      <div class="event-date">📅 March 20 - March 25, 2026</div>
-      <div class="event-description">
-        The spring basketball tournament was a huge success with 12 teams participating. 
-        Engineering department won the championship!
-      </div>
-      <div class="event-category">Tournament</div>
-    </div>
-
-    <div class="event-item">
-      <h3>Volleyball League (Completed)</h3>
-      <div class="event-date">📅 February 15 - March 10, 2026</div>
-      <div class="event-description">
-        An exciting league where all departments showcased their volleyball skills. 
-        Great matches and good sportsmanship displayed throughout.
-      </div>
-      <div class="event-category">League</div>
-    </div>
-
-    <div class="section">
-      <h2>How to Register</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Step 1: Choose Event</h3>
-          <p>Select the event you want to participate in from the list above.</p>
+        <div class="event-item reveal" data-category="Tournament" data-status="upcoming">
+          <h3>Football Tournament 2026</h3>
+          <div class="event-date">📅 May 15 – May 30, 2026</div>
+          <div class="event-location">📍 KUET Ground, Main Campus</div>
+          <div class="event-description">
+            The biggest football tournament of the year! Teams from all departments compete in a thrilling knockout format. Sign up your team now and showcase your skills on the main pitch.
+          </div>
+          <div class="event-footer">
+            <span class="event-category">Tournament</span>
+            <button class="register-btn">Register Team</button>
+          </div>
         </div>
-        <div class="card">
-          <h3>Step 2: Click Register</h3>
-          <p>Click the register button and fill in your details.</p>
+
+        <div class="event-item reveal" data-category="Championship" data-status="upcoming">
+          <h3>Badminton Championship 2026</h3>
+          <div class="event-date">📅 May 10 – May 15, 2026</div>
+          <div class="event-location">📍 KUET Indoor Sports Complex</div>
+          <div class="event-description">
+            Singles and doubles badminton championship. All players welcome, from beginners to advanced. Professional referees and standard courts provided.
+          </div>
+          <div class="event-footer">
+            <span class="event-category">Championship</span>
+            <button class="register-btn">Register</button>
+          </div>
         </div>
-        <div class="card">
-          <h3>Step 3: Confirm</h3>
-          <p>Receive confirmation and get event details via email.</p>
+
+        <div class="event-item reveal" data-category="League" data-status="upcoming">
+          <h3>Cricket League 2026</h3>
+          <div class="event-date">📅 June 1 – June 20, 2026</div>
+          <div class="event-location">📍 KUET Cricket Field</div>
+          <div class="event-description">
+            Twenty20 cricket league featuring high-octane matches. Individual players can join through the registration portal or teams can register together.
+          </div>
+          <div class="event-footer">
+            <span class="event-category">League</span>
+            <button class="register-btn">Register</button>
+          </div>
+        </div>
+
+        <div class="event-item reveal" data-category="Festival" data-status="upcoming">
+          <h3>Indoor Games Festival</h3>
+          <div class="event-date">📅 June 5 – June 7, 2026</div>
+          <div class="event-location">📍 KUET Student Center</div>
+          <div class="event-description">
+            Table tennis, chess, carrom, and other indoor games. Family-friendly atmosphere with prizes for winners. Perfect for unwinding after exams!
+          </div>
+          <div class="event-footer">
+            <span class="event-category">Festival</span>
+            <button class="register-btn">Register</button>
+          </div>
+        </div>
+
+        <div class="event-item reveal" data-category="Championship" data-status="upcoming">
+          <h3>Athletic Championships 2026</h3>
+          <div class="event-date">📅 July 10 – July 11, 2026</div>
+          <div class="event-location">📍 KUET Athletic Track</div>
+          <div class="event-description">
+            Track and field events including sprints, long-distance runs, jumps, and throws. Open to all KUET students. Individual participation encouraged.
+          </div>
+          <div class="event-footer">
+            <span class="event-category">Championship</span>
+            <button class="register-btn">Register</button>
+          </div>
+        </div>
+
+        <div class="event-item past reveal" data-category="Tournament" data-status="past">
+          <h3>Basketball Tournament — Spring 2026</h3>
+          <div class="event-date">📅 March 20 – March 25, 2026 (Completed)</div>
+          <div class="event-description">
+            The spring basketball tournament was a huge success with 12 teams participating. Engineering department claimed the championship trophy!
+          </div>
+          <div class="event-footer">
+            <span class="event-category">Tournament</span>
+          </div>
+        </div>
+
+        <div class="event-item past reveal" data-category="League" data-status="past">
+          <h3>Volleyball League — Winter 2026</h3>
+          <div class="event-date">📅 February 15 – March 10, 2026 (Completed)</div>
+          <div class="event-description">
+            An exciting league where all departments showcased their volleyball skills. Great matches and outstanding sportsmanship displayed throughout.
+          </div>
+          <div class="event-footer">
+            <span class="event-category">League</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 70px;">
+        <div class="section__header reveal">
+          <span class="section__label">Participation</span>
+          <h2 class="section__title">How to Register</h2>
+        </div>
+        <div class="cards">
+          <div class="card reveal">
+            <div class="card__icon">1️⃣</div>
+            <h3>Choose Event</h3>
+            <p>Select the event you want to participate in from the list above.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card__icon">2️⃣</div>
+            <h3>Click Register</h3>
+            <p>Click the Register button and fill in your student details and team information.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card__icon">3️⃣</div>
+            <h3>Get Confirmed</h3>
+            <p>Receive confirmation and full event schedule details via your KUET email.</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="footer">
-      <p>© 2026 Organisation of KUET Sports</p>
-    </div>
+    <footer class="footer">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">🏆 OKS KUET</div>
+          <p class="footer__desc">The Organisation of KUET Sports promotes athletic excellence, teamwork, and student wellbeing through competitive and recreational sports at KUET.</p>
+          <div class="footer__social">
+            <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+            <a href="#" class="social-icon" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">Quick Links</div>
+          <div class="footer__links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__heading">Sports</div>
+          <div class="footer__links">
+            <a href="#">Football</a>
+            <a href="#">Cricket</a>
+            <a href="#">Basketball</a>
+            <a href="#">Badminton</a>
+            <a href="#">Athletics</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Organisation of KUET Sports. All rights reserved.</p>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

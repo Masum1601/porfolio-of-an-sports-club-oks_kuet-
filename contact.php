@@ -75,7 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isLoggedIn) {
 
         <div class="contact-form reveal-right">
           <?php if (!$isLoggedIn): ?>
-            <!-- Login required message -->
             <div style="text-align:center;padding:40px 20px;">
               <div style="font-size:3rem;margin-bottom:16px;">🔒</div>
               <h3 style="font-family:'Poppins',sans-serif;color:var(--navy);margin-bottom:10px;">Login Required</h3>

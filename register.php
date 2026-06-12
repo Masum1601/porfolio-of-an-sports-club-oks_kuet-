@@ -1,7 +1,6 @@
 <?php
 require_once 'auth_check.php';
 
-// If already logged in, redirect to home
 if ($isLoggedIn) {
     header('Location: index.php');
     exit;
@@ -22,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $old['full_name'] = $fullName;
     $old['email']     = $email;
 
-    // Validation
     if (strlen($fullName) < 2) {
         $errors[] = 'Full name must be at least 2 characters.';
     }
@@ -37,13 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (empty($errors)) {
-        // Check duplicate email
         $stmt = $pdo->prepare("SELECT id FROM users WHERE email = ?");
         $stmt->execute([$email]);
         if ($stmt->fetch()) {
             $errors[] = 'An account with this email already exists.';
         } else {
-            // Insert new user
             $hash = password_hash($password, PASSWORD_DEFAULT);
             $stmt = $pdo->prepare("INSERT INTO users (full_name, email, password_hash) VALUES (?, ?, ?)");
             $stmt->execute([$fullName, $email, $hash]);

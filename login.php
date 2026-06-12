@@ -1,7 +1,5 @@
 <?php
 require_once 'auth_check.php';
-
-// If already logged in, redirect to home
 if ($isLoggedIn) {
     header('Location: index.php');
     exit;
@@ -16,8 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email    = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
     $oldEmail = $email;
-
-    // Validation
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Please enter a valid email address.';
     }
@@ -31,7 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $stmt->fetch();
 
         if ($user && password_verify($password, $user['password_hash'])) {
-            // Regenerate session ID to prevent session fixation
             session_regenerate_id(true);
 
             $_SESSION['user_id']   = $user['id'];
@@ -47,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Check for success message from registration
 $regSuccess = isset($_GET['registered']) ? true : false;
 ?>
 <!doctype html>

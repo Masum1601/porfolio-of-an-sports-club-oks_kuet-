@@ -1,8 +1,4 @@
 <?php
-/**
- * Auth Check — included at the top of every page.
- * Starts session and sets auth variables for use in templates.
- */
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }

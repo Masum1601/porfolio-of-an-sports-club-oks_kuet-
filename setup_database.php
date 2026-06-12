@@ -1,24 +1,21 @@
 <?php
-/**
- * Database Setup Script — Run this ONCE to create the database and tables.
- * Visit: http://localhost/oks_portfolio/setup_database.php
- */
 
 $db_host = 'localhost';
 $db_user = 'root';
 $db_pass = '';
 
 try {
-    // Connect without specifying a database first
     $pdo = new PDO("mysql:host=$db_host;charset=utf8mb4", $db_user, $db_pass, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     ]);
 
-    // Create the database
     $pdo->exec("CREATE DATABASE IF NOT EXISTS oks_kuet CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
     $pdo->exec("USE oks_kuet");
 
-    // Create users table
+    
+    $pdo->exec("CREATE DATABASE IF NOT EXISTS oks_kuet CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    $pdo->exec("USE oks_kuet");
+
     $pdo->exec("
         CREATE TABLE IF NOT EXISTS users (
             id INT AUTO_INCREMENT PRIMARY KEY,
@@ -30,7 +27,6 @@ try {
         ) ENGINE=InnoDB
     ");
 
-    // Create contact_submissions table
     $pdo->exec("
         CREATE TABLE IF NOT EXISTS contact_submissions (
             id INT AUTO_INCREMENT PRIMARY KEY,
@@ -44,7 +40,7 @@ try {
         ) ENGINE=InnoDB
     ");
 
-    // Seed a default admin user (password: admin123)
+    
     $adminEmail = 'admin@oks.kuet.ac.bd';
     $stmt = $pdo->prepare("SELECT id FROM users WHERE email = ?");
     $stmt->execute([$adminEmail]);

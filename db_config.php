@@ -1,13 +1,9 @@
 <?php
-/**
- * Database Configuration — OKS KUET
- * PDO connection to MySQL database.
- */
 
 $db_host = 'localhost';
 $db_name = 'oks_kuet';
-$db_user = 'root';       // Default XAMPP MySQL user
-$db_pass = '';            // Default XAMPP MySQL password (empty)
+$db_user = 'root';
+$db_pass = '';
 
 try {
     $pdo = new PDO(

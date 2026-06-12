@@ -1,7 +1,4 @@
 <?php
-/**
- * Logout — destroys session and redirects to home page.
- */
 session_start();
 $_SESSION = [];
 

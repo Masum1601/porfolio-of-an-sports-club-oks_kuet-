@@ -1,7 +1,6 @@
 <?php
 require_once 'auth_check.php';
 
-// Only admins can access this page
 if (!$isAdmin) {
     header('Location: index.php');
     exit;
@@ -9,11 +8,10 @@ if (!$isAdmin) {
 
 require_once 'db_config.php';
 
-// Handle delete actions
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['delete_user'])) {
         $uid = (int)$_POST['delete_user'];
-        if ($uid !== (int)$_SESSION['user_id']) { // Can't delete yourself
+        if ($uid !== (int)$_SESSION['user_id']) {
             $stmt = $pdo->prepare("DELETE FROM users WHERE id = ? AND is_admin = 0");
             $stmt->execute([$uid]);
         }
@@ -87,7 +85,6 @@ $totalAdmins = count(array_filter($users, fn($u) => $u['is_admin']));
       </div>
     </section>
 
-    <!-- Stats Overview -->
     <section class="stats">
       <div class="stats__grid">
         <div>
@@ -105,7 +102,6 @@ $totalAdmins = count(array_filter($users, fn($u) => $u['is_admin']));
       </div>
     </section>
 
-    <!-- Users Table -->
     <div class="section" id="users">
       <div class="section__header">
         <span class="section__label">User Management</span>
@@ -155,7 +151,6 @@ $totalAdmins = count(array_filter($users, fn($u) => $u['is_admin']));
       </div>
     </div>
 
-    <!-- Contact Submissions Table -->
     <div class="section--full section--alt">
       <div class="section" id="submissions">
         <div class="section__header">

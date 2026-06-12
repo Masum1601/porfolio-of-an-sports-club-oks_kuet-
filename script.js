@@ -168,9 +168,6 @@ if (lightbox && galleryItems.length) {
   });
 }
 
-/* ----------------------------------------------------------
-   7. CONTACT FORM VALIDATION (contact.html)
-   ---------------------------------------------------------- */
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {

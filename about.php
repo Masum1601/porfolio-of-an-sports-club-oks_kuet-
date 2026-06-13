@@ -32,7 +32,7 @@
       </nav>
     </header>
 
-    <section class="hero hero--short"><div class="hero__inner"><div class="hero__badge">About OKS</div><h1>Our Story &amp; Mission</h1><p>Building athletes, leaders and lifelong friendships at KUET since 2014.</p></div></section>
+    <section class="hero hero--short hero--about"><div class="hero__inner"><div class="hero__badge">About OKS</div><h1>Our Story &amp; Mission</h1><p>Building athletes, leaders and lifelong friendships at KUET since 2014.</p></div></section>
 
     <div class="section--full section--alt"><div class="section"><div class="cards" style="grid-template-columns: 1fr 1fr;">
       <div class="card reveal-left"><div class="card__icon">🎯</div><h3>Our Mission</h3><p>The Organisation of KUET Sports is dedicated to promoting physical fitness, teamwork, and excellence among KUET students. We create a platform where students can develop their athletic abilities while building strong bonds with their peers through competitive and recreational sports activities.</p></div>

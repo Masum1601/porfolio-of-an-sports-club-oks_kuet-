@@ -85,6 +85,9 @@ const counterObserver = new IntersectionObserver((entries) => {
 const statsSection = document.getElementById('stats');
 if (statsSection) counterObserver.observe(statsSection);
 
+const filterBtns = document.querySelectorAll('.event-filter-btn');
+const eventItems = document.querySelectorAll('.event-card');
+
 if (filterBtns.length && eventItems.length) {
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {

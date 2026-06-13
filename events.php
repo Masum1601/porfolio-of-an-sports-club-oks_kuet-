@@ -32,7 +32,7 @@
       </nav>
     </header>
 
-    <section class="hero hero--short"><div class="hero__inner"><div class="hero__badge">Sports Events</div><h1>Upcoming &amp; Past Events</h1><p>Check out our exciting sports competitions, tournaments, and activities.</p></div></section>
+    <section class="hero hero--short hero--events"><div class="hero__inner"><div class="hero__badge">Sports Events</div><h1>Upcoming &amp; Past Events</h1><p>Check out our exciting sports competitions, tournaments, and activities.</p></div></section>
 
     <div class="section">
       <div class="section__header reveal"><span class="section__label">Events Calendar</span><h2 class="section__title">All Events</h2><p class="section__subtitle">Filter by category or status to find the events you're interested in.</p></div>

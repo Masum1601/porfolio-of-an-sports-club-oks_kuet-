@@ -37,15 +37,20 @@
     <div class="section">
       <div class="section__header reveal"><span class="section__label">Photo Gallery</span><h2 class="section__title">Event Highlights</h2><p class="section__subtitle">Click any photo to view it in full size.</p></div>
       <div class="gallery-grid" id="galleryGrid">
-        <div class="gallery-item reveal" data-caption="Football Tournament 2026 Finals"><img src="image.jpeg" alt="Football Tournament Finals" /><div class="gallery-overlay"><span>Football Tournament Finals</span></div></div>
-        <div class="gallery-item reveal" data-caption="Cricket League Award Ceremony"><img src="image.jpeg" alt="Cricket League Awards" /><div class="gallery-overlay"><span>Cricket League Awards</span></div></div>
-        <div class="gallery-item reveal" data-caption="Badminton Championship 2025"><img src="image.jpeg" alt="Badminton Championship" /><div class="gallery-overlay"><span>Badminton Championship 2025</span></div></div>
-        <div class="gallery-item reveal" data-caption="Athletic Championship — Sprint Finals"><img src="image.jpeg" alt="Athletic Sprint Finals" /><div class="gallery-overlay"><span>Athletic Sprint Finals</span></div></div>
-        <div class="gallery-item reveal" data-caption="Basketball Tournament Spring 2026"><img src="image.jpeg" alt="Basketball Tournament" /><div class="gallery-overlay"><span>Basketball Tournament</span></div></div>
-        <div class="gallery-item reveal" data-caption="Volleyball League Opening Ceremony"><img src="image.jpeg" alt="Volleyball League" /><div class="gallery-overlay"><span>Volleyball League 2026</span></div></div>
-        <div class="gallery-item reveal" data-caption="Indoor Games Festival 2025"><img src="image.jpeg" alt="Indoor Games Festival" /><div class="gallery-overlay"><span>Indoor Games Festival</span></div></div>
-        <div class="gallery-item reveal" data-caption="OKS Annual Sports Day"><img src="image.jpeg" alt="OKS Annual Sports Day" /><div class="gallery-overlay"><span>OKS Annual Sports Day</span></div></div>
-        <div class="gallery-item reveal" data-caption="Football Championship Trophy Lift"><img src="image.jpeg" alt="Trophy Presentation" /><div class="gallery-overlay"><span>Trophy Presentation 2025</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 01"><img src="gallery-01.jpeg" alt="Gallery Photo 01" /><div class="gallery-overlay"><span>Gallery Photo 01</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 02"><img src="gallery-02.jpeg" alt="Gallery Photo 02" /><div class="gallery-overlay"><span>Gallery Photo 02</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 03"><img src="gallery-03.jpeg" alt="Gallery Photo 03" /><div class="gallery-overlay"><span>Gallery Photo 03</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 04"><img src="gallery-04.jpeg" alt="Gallery Photo 04" /><div class="gallery-overlay"><span>Gallery Photo 04</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 05"><img src="gallery-05.jpeg" alt="Gallery Photo 05" /><div class="gallery-overlay"><span>Gallery Photo 05</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 06"><img src="gallery-06.jpeg" alt="Gallery Photo 06" /><div class="gallery-overlay"><span>Gallery Photo 06</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 07"><img src="gallery-07.jpeg" alt="Gallery Photo 07" /><div class="gallery-overlay"><span>Gallery Photo 07</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 08"><img src="gallery-08.jpeg" alt="Gallery Photo 08" /><div class="gallery-overlay"><span>Gallery Photo 08</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 09"><img src="gallery-09.jpeg" alt="Gallery Photo 09" /><div class="gallery-overlay"><span>Gallery Photo 09</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 10"><img src="gallery-10.jpeg" alt="Gallery Photo 10" /><div class="gallery-overlay"><span>Gallery Photo 10</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 11"><img src="gallery-11.jpeg" alt="Gallery Photo 11" /><div class="gallery-overlay"><span>Gallery Photo 11</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 12"><img src="gallery-12.jpeg" alt="Gallery Photo 12" /><div class="gallery-overlay"><span>Gallery Photo 12</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 13"><img src="gallery-13.jpeg" alt="Gallery Photo 13" /><div class="gallery-overlay"><span>Gallery Photo 13</span></div></div>
+        <div class="gallery-item reveal" data-caption="Gallery Photo 14"><img src="gallery-14.jpeg" alt="Gallery Photo 14" /><div class="gallery-overlay"><span>Gallery Photo 14</span></div></div>
       </div>
     </div>
 
